@@ -1,4 +1,5 @@
 import React from "react";
+import './NavBar.css'
 // import "../../App.css";
 
 // import { Profileinlarge1 } from "../ProfileContent/profile";
@@ -6,16 +7,16 @@ import React from "react";
 // import { useState } from "react";
 // import { useCookies } from 'react-cookie';
 
-let countloginsignup = 0
+// let countloginsignup = 0
 
 const NavBar = (props) => {
 
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="p-1">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark circle-border">
         <div class="container-fluid">
           <a href="#newlink" class="navbar-brand">Confezz</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#newlinknavbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColor02">
@@ -46,8 +47,11 @@ const NavBar = (props) => {
               </li>
             </ul>
           </div>
+
         </div>
       </nav>
+
+
     </div>
   );
 
