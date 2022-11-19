@@ -13,8 +13,8 @@ const Footer = (props) => {
 
   return (
     <div class="p-1">
-      <footer class="p-2 border-top footer text-muted bg-dark circle-border ">
-        <div class="container">
+      <footer class="p-2 bor-top footer text-muted bg-dark circle-border fixed-bottom">
+        <div class="container ">
           &copy; 2022 - Confezz By <a href="https://github.com/vasu-1/">Vashishth Patel</a> - <a href="#privacy">Privacy</a>
         </div>
       </footer>
