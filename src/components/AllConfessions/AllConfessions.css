@@ -11,3 +11,7 @@ html {
     border-radius:3px;
     background: #FFF;
 }
+
+.toLink {
+  text-decoration: none;
+}

@@ -2,6 +2,8 @@ import './App.css';
 import HomePage from './components/HomePage/HomePage.js';
 import {useEffect} from 'react';
 import $ from "jquery";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Logout from './components/Logout/Logout'
 
 function App() {
 
@@ -18,6 +20,11 @@ function App() {
   return (
     <div class='random'>
       <HomePage />
+      <Router>
+        <div>
+          <Route exact path='/logout' component={Logout} />
+        </div>
+      </Router>
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AddConfession from '../AddConfession/AddConfess'
 import AllConfessions from '../AllConfessions/AllConfessions'
 import Confession from '../Confession/Confession'
-import Logout from '../Logout/Logout'
 import $ from "jquery";
 import axios from '../axios.js';
 import { useState } from "react";
@@ -77,7 +76,6 @@ const HomePage = (props) => {
           <Route exact path='/confess/create' component={AddConfession} />
           <Route exact path='/confess/' component={AllConfessions} />
           <Route exact path='/confess/view/:cid' component={Confession} />
-          <Route exact path='/logout' component={Logout} />
         </div>
       </Router>
       <Footer></Footer>

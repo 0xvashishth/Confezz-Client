@@ -12,8 +12,6 @@ import './NavBar.css'
 
 const NavBar = (props) => {
 
-  
-  
   return (
     <div class="p-1">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark circle-border">
