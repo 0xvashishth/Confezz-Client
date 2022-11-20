@@ -1,5 +1,6 @@
 import React from "react";
 import './NavBar.css'
+// import axios from '../axios.js';
 // import "../../App.css";
 
 // import { Profileinlarge1 } from "../ProfileContent/profile";
@@ -11,6 +12,8 @@ import './NavBar.css'
 
 const NavBar = (props) => {
 
+  
+  
   return (
     <div class="p-1">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark circle-border">
@@ -30,26 +33,22 @@ const NavBar = (props) => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#newlink">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#newlink">Pricing</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#newlink">About</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#newlink">Privacy Policy</a>
+              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#newlink" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#newlink" role="button" aria-haspopup="true" aria-expanded="false">Confession</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#newlink">Action</a>
-                  <a class="dropdown-item" href="#newlink">Another action</a>
-                  <a class="dropdown-item" href="#newlink">Something else here</a>
+                  <a class="dropdown-item" href="/confess/create">Create Confession</a>
+                  <a class="dropdown-item" href="/confess">View All Confession</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#newlink">Separated link</a>
+                  <a class="dropdown-item" href="#newlink">Top Confession</a>
                 </div>
               </li>
               </ul>
-                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
+                {props.loginButton}
           </div>
 
         </div>

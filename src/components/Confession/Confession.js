@@ -1,15 +1,36 @@
 import React from "react";
 import './Confession.css'
-// import "../../App.css";
+import $ from "jquery";
+import axios from '../axios.js'
+import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
+// import "../../App.css";
 // import { Profileinlarge1 } from "../ProfileContent/profile";
 // import $ from "jquery";
-// import { useState } from "react";
 // import { useCookies } from 'react-cookie';
 // position-fixed to fix the bottom footer
 // let countloginsignup = 0
 
 const Confession = (props) => {
+
+  const {cid} = useParams();
+
+  const [confession,setConfession] = useState();
+  
+  async function getConfession(){
+    await axios.get(`/api/confess/c/${cid}`).then((res) => {
+      console.log(res.data);
+      // console.log("Len-> ", res.data.response.length);
+      setAllResponse(res.data);
+      console.
+      // console.log(allresponse);
+    })
+  }
+
+   useEffect(() => {
+     getConfession();
+   },[]);
 
   return (
     <div class="p-2">
@@ -29,13 +50,13 @@ const Confession = (props) => {
           </h4>
         </div>
         <div class="alert alert-dismissible alert-secondary">
-          <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important alert message</a>.
+          <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
         </div>
           <div class="alert alert-dismissible alert-success">
-        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important alert message</a>.
+        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
       </div>
         <div class="alert alert-dismissible alert-primary">
-        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important alert message</a>.
+        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
       </div>
       </div>
       <div class="p-1">
