@@ -1,0 +1,13 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;  /* Remove scrollbar space */
+    background-color:#dc307c;
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    border-radius:3px;
+    background: #FFF;
+}

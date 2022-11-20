@@ -15,14 +15,17 @@ const NavBar = (props) => {
     <div class="p-1">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark circle-border">
         <div class="container-fluid">
-          <a href="#newlink" class="navbar-brand">Confezz</a>
+          <a class="navbar-brand" href="/">
+      <img src="https://user-images.githubusercontent.com/89864614/202891734-7d82389f-510b-439a-bb53-b423aed61ec9.png" alt="Logo" height="34" class="d-inline-block  align-text-top" />
+    Confezz
+    </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#newlink">Home
+                <a class="nav-link active" href="/">Home
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
@@ -45,7 +48,8 @@ const NavBar = (props) => {
                   <a class="dropdown-item" href="#newlink">Separated link</a>
                 </div>
               </li>
-            </ul>
+              </ul>
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</button>
           </div>
 
         </div>

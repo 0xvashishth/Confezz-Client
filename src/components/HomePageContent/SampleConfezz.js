@@ -21,7 +21,7 @@ const SampleConfezz = (props) => {
         </h2>
         <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-3">
           <div class="col">
-            <div class="card h-100 border-success ">
+            <div class="card h-100 border-dark ">
               <div class="card-header">Evento Feature #1</div>
               <div class="card-body">
                 <h4 class="card-title">Create Unlimited Events</h4>
@@ -30,7 +30,7 @@ const SampleConfezz = (props) => {
             </div>
           </div>
           <div class="col">
-            <div class="card h-100 border-danger ">
+            <div class="card h-100 border-dark ">
               <div class="card-header">Evento Feature #2</div>
               <div class="card-body">
                 <h4 class="card-title">Get All Registrations In One Click</h4>
@@ -39,7 +39,7 @@ const SampleConfezz = (props) => {
             </div>
           </div>
           <div class="col">
-            <div class="card h-100 border-success ">
+            <div class="card h-100 border-dark ">
               <div class="card-header">Evento Feature #3</div>
               <div class="card-body">
                 <h4 class="card-title">Get Email Service</h4>
@@ -48,7 +48,7 @@ const SampleConfezz = (props) => {
             </div>
           </div>
           <div class="col">
-            <div class="card h-100 border-danger ">
+            <div class="card h-100 border-dark ">
               <div class="card-header">Evento Feature #4</div>
               <div class="card-body">
                 <h4 class="card-title">Much More</h4>
