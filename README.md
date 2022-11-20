@@ -14,9 +14,6 @@ Website Link :link: : https://confezz.co/
 
 ---
 
-![image](https://user-images.githubusercontent.com/76911582/202900739-724cc31f-a164-4f82-9da0-650d4634261b.png)
-
-
 ## Inspiration ⚙️
 This concept was inspired by the quote "Right to Speak." People are more frightened to express themselves in public because they are fearful of being judged or mocked. However, this application allows people to hide behind the internet's walls and express themselves freely.
 
