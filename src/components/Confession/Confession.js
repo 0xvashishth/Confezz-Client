@@ -4,7 +4,9 @@ import $ from "jquery";
 import axios from '../axios.js'
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
-
+import { useCookies } from 'react-cookie';
+import { Redirect } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 // import "../../App.css";
 // import { Profileinlarge1 } from "../ProfileContent/profile";
 // import $ from "jquery";
@@ -16,15 +18,33 @@ const Confession = (props) => {
 
   const {cid} = useParams();
 
-  const [confession,setConfession] = useState([]);
+  const [cookies, setCookie] = useCookies(['user']);
+  
+  const [confession,setConfession] = useState({});
+  const [comments, setComment] = useState([]);
+
+  async function addComment(){
+    if(cookies.jwttokenloginuser){
+      var commentdata = $('#commentdata').val();
+      console.log("Commment click");
+        await axios.post(`/api/comment/comment`,{
+          id: cid,
+          author: cookies.nickname,
+          comment: commentdata
+        }).then((res) => {
+          toast.success("Comment Added Successfully!")
+          getConfession();
+      })
+    }else{
+      toast.error("Login to comment!");
+    }
+  }
   
   async function getConfession(){
     await axios.get(`/api/confess/c/${cid}`).then((res) => {
-      console.log(res.data);
-      // console.log("Len-> ", res.data.response.length);
-      setConfession(res.data);
-      console.log(confession);
-      // console.log(allresponse);
+      console.log(res.data.confession);
+      setConfession(res.data.confession);
+      setComment(res.data.comments)
     })
   }
 
@@ -34,13 +54,12 @@ const Confession = (props) => {
 
   return (
     <div class="p-2">
+      <Toaster toastOptions={{ style: { fontSize: "14px" } }} />
       <div class="card">
   <div class="card-body">
-    <h3 class="card-title">Card title</h3>
-    <h5 class="card-subtitle mb-2 text-muted">Card subtitle</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#link" class="card-link">Card link</a>
-    <a href="#link" class="card-link">Another link</a>
+    <h3 class="card-title">{confession.title}</h3>
+    <h5 class="card-subtitle mb-2 text-muted">To : {confession.to}</h5>
+    <p class="card-text">{confession.description}</p>
   </div>
 </div>
       <div class="pt-4">
@@ -49,23 +68,21 @@ const Confession = (props) => {
             Comments
           </h4>
         </div>
-        <div class="alert alert-dismissible alert-secondary">
-          <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
+        
+        {comments.map((comment)=>(
+          <div class="alert alert-dismissible alert-secondary" key={comment._id}>
+            {comment.comment}
         </div>
-          <div class="alert alert-dismissible alert-success">
-        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
-      </div>
-        <div class="alert alert-dismissible alert-primary">
-        <strong>Well done!</strong> You successfully read <a href="#new" class="alert-link">this important message</a>.
-      </div>
+        ))}
+        
       </div>
       <div class="p-1">
         <div class="form-group">
   <h4 class="form-label mt-4">Post Your Comment Below</h4>
   <div class="form-group">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" spellcheck="false" data-ms-editor="true" />
-      <span class="input-group-text"><i class="fa-regular fa-paper-plane"></i></span>
+      <input type="text" class="form-control" id="commentdata" aria-label="Amount (to the nearest dollar)" spellcheck="false" data-ms-editor="true" />
+      <span class="input-group-text" onClick={addComment}><i class="fa-regular fa-paper-plane"></i></span>
     </div>
   </div>
 </div>
