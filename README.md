@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Confezz 🤫
 
-## Available Scripts
+<a href="https://github.com/vasu-1/Confezz-Client"><img src="https://sloc.xyz/github/vasu-1/Confezz-Client?style=for-the-badge" alt="total lines"/></a>
+<a href="https://github.com/vasu-1/Confezz-Client"><img src="https://img.shields.io/github/stars/vasu-1/Confezz-Client" alt="Stars"/></a>
+<a href="https://github.com/vasu-1/Confezz-Client/network/members"><img src="https://img.shields.io/github/forks/vasu-1/Confezz-Client" alt="Forks"/></a>
+<a href="https://github.com/vasu-1/Confezz-Client/commits"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vasu-1/Confezz-Client?logo=github"></a>
+</div>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+Website Link :link: : https://confezz.co/ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Inspiration ⚙️
+This concept was inspired by the quote "Right to Speak." People are more frightened to express themselves in public because they are fearful of being judged or mocked. However, this application allows people to hide behind the internet's walls and express themselves freely.
 
-### `npm test`
+## What it does ⚙️
+Users can anonymously confess their opinions, and other anonymous users can look at it and respond.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How we built it 🏡
+It is a web application created with **React**, with **MongoDB** serving as the database. In order to handle user requests, we have used **Express.js** and **Node.js** as our backend technology.
 
-### `npm run build`
+## Challenges we ran into 🏃‍♂️
+The main challenge that we ran into was the time-management. We were not sure what to make and what kind of technology we would use that will make our project stand out.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What we learned 💸
+We learned so much that will help us perform better in future hackathons. We grasped the concept of teamwork and the need of working with others to create wonderful projects and manage time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What's next for Confezz 😎
+We are considering expanding this idea to university students and a larger platform, i.e., the world, so that they may express their feelings and, if others feel the same and want to help, they can communicate and come up with a solution.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack 👨‍💻
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
