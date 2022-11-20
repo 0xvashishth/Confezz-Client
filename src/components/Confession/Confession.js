@@ -16,14 +16,14 @@ const Confession = (props) => {
 
   const {cid} = useParams();
 
-  const [confession,setConfession] = useState();
+  const [confession,setConfession] = useState([]);
   
   async function getConfession(){
     await axios.get(`/api/confess/c/${cid}`).then((res) => {
       console.log(res.data);
       // console.log("Len-> ", res.data.response.length);
-      setAllResponse(res.data);
-      console.
+      setConfession(res.data);
+      console.log(confession);
       // console.log(allresponse);
     })
   }
