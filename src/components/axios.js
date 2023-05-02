@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://Confezz-Server.vashishth-patel.repl.co',
+  baseURL: 'https://confezz-server.onrender.com/',
 });
 
 export default instance;
